@@ -1,6 +1,6 @@
 # docker
 
-## How to install in LINUX
+## How to install
 ```
 curl --version
 curl -sSL https://get.docker.com/ | sh
