@@ -80,3 +80,83 @@ sudo docker rmi $(docker images -q)
 #############################################################################################
 
 ## SWARM
+
+# Swarm Configure
+
+NOTE - Global Ports in Docker Swarm
+Engine port: 2375
+Secure Engine port: 2376
+Swarm port: 2377
+
+## Dokcer Installed in all machine
+- Manger IP
+172.31.12.161
+172.31.12.162
+172.31.12.163
+
+- Worker IP
+172.31.12.164
+172.31.12.165
+172.31.12.166
+
+- IMP CMD
+``` 
+docker swarm join-token manager
+docker swarm join-token worker
+docker node ls
+docker node promote (ID)
+```
+
+## Configure the Manager and Worker
+
+- Manager 1
+```
+docker swarm init --advertise-addr 172.31.12.161:2377 --listen-addr 172.31.12.161:2377
+```
+
+- Manger 2
+```
+docker swarm join \
+-- token foo \
+172.31.12.161:2377
+--advertise-addr 172.31.12.162:2377 \
+--listen-addr 172.31.12.162:2377
+```
+
+- Manger 3
+```
+docker swarm join \
+-- token foo \
+172.31.12.161:2377
+--advertise-addr 172.31.12.163:2377 \
+--listen-addr 172.31.12.163:2377
+```
+
+- Worker 1
+```
+docker swarm join \
+-- token foo \
+172.31.12.161:2377
+--advertise-addr 172.31.12.164:2377 \
+--listen-addr 172.31.12.164:2377
+```
+
+- Worker 2
+```
+docker swarm join \
+-- token foo \
+172.31.12.161:2377
+--advertise-addr 172.31.12.165:2377 \
+--listen-addr 172.31.12.165:2377
+```
+
+- Worker 3
+```
+docker swarm join \
+-- token foo \
+172.31.12.161:2377
+--advertise-addr 172.31.12.166:2377 \
+--listen-addr 172.31.12.166:2377
+```
+#############################################################################################
+## SWARM SERVICE
