@@ -63,3 +63,14 @@ sudo docker start web
 ```
 sudo docker run -it --name try ubuntu:latest /bin/bash
 ```
+- Exit from intreactive mode without stop
+```
+CTRL P+Q
+```
+
+## Stop and start multiple imgaes containers
+```
+sudo docker stop $(docker ps -aq)
+sudo docker rm $(docker ps -aq)
+sudo docker rmi $(docker images -q)
+```
