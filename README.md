@@ -88,7 +88,7 @@ Engine port: 2375
 Secure Engine port: 2376
 Swarm port: 2377
 
-## Dokcer Installed in all machine
+## Docker Installed in all machine which will react as worker or manager with Docker 1.12 or later
 - Manger IP
 1. 172.31.12.161
 2. 172.31.12.162
