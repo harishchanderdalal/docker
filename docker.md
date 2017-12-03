@@ -1,11 +1,18 @@
 # Docker CMD
-- sudo docker version
-- sudo docker info
-
-- start container
+Check Docker Version
 ```
-* Run Container
+sudo docker version
+```
+Docker Complete information
+```
+sudo docker info
+```
+
+##Start Container
+Run Container
+```
 sudo docker container run --publish 80:80 nginx
+```
 sudo docker container run --publish 80:80 --detach nginx
 sudo docker container ls
 sudo docker container stop 67cc
