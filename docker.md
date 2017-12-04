@@ -16,12 +16,14 @@ docker-compose --version
 ```
 
 # Docker CMD
-- Check Docker Version
+Check Docker Version
+```
 sudo docker version
-
-- Docker Complete information
+```
+Docker Complete information
+```
 sudo docker info
-
+```
 Docker images
 ```
 sudo docker image ls
