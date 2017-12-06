@@ -119,3 +119,11 @@ sudo docker container run --publish 8080:80 -d --name app2 --network apps httpd
 sudo docker container run -d --name try1 --net apps --net-alias harish.ccom elasticsearch:2
 sudo docker container run --rm --net apps alpine nslookup harish.com
 ```
+
+## Image Tagging
+```
+sudo docker pull imagename
+sudo docker image tag sourceimage:tag targetimage:tag
+sudo docker login
+sudo docker push imagename
+```
