@@ -125,5 +125,5 @@ sudo docker container run --rm --net apps alpine nslookup harish.com
 sudo docker pull imagename
 sudo docker image tag sourceimage:tag targetimage:tag
 sudo docker login
-sudo docker push imagename
+sudo docker image push imagename
 ```
