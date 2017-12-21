@@ -96,6 +96,9 @@ sudo docker container run --publish 80:80 --detach --name frontend nginx nginx -
 Run Container as Foreground with name with cmd with env
 ```
 sudo docker container run --publish 3306:3306 --detach --name db -e MYSQL_RANDOM_ROOT_PASSWORD=yes mysql
+
+example -
+MYSQL_ROOT_PASSWORD=root
 ```
 
 
